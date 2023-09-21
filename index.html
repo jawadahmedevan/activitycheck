@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Status Indicator (In or Out Office) of Masum Vai</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #status-container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        #status-indicator {
+            width: 37px;
+            height: 37px;
+            background-color: red; 
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        #status-text {
+            font-size: 45px;
+            font-weight: bold;
+        }
+ footer {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            background-color: white;
+            color: white;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 60%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Current Status of Masum vai</h1>
+    </header>
+
+    <div id="status-container">
+        <div id="status-indicator"></div>
+        <span id="status-text">Out of Room</span>
+    </div>
+
+   <footer>
+        <img src="sample-image.jpg" alt="DSI image">
+    </footer>
+    <script>
+        const statusIndicator = document.getElementById('status-indicator');
+        const statusText = document.getElementById('status-text');
+
+        setStatus("active");
+        function setStatus(newStatus) {
+            if (newStatus === "busy") {
+                statusIndicator.style.backgroundColor = "red";
+                statusText.innerText = "Out Of Room";
+            } else if (newStatus === "active") {
+                statusIndicator.style.backgroundColor = "green";
+                statusText.innerText = "In Room";
+            }
+        }
+    </script>
+</body>
+</html>
