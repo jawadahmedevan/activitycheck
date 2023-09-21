@@ -67,9 +67,9 @@
         const statusIndicator = document.getElementById('status-indicator');
         const statusText = document.getElementById('status-text');
 
-        setStatus("busy");
+        setStatus("active");
         function setStatus(newStatus) {
-            if (newStatus === "active") {
+            if (newStatus === "busy") {
                 statusIndicator.style.backgroundColor = "red";
                 statusText.innerText = "Out Of Room";
             } else if (newStatus === "active") {
