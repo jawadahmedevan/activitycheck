@@ -67,7 +67,7 @@
         const statusIndicator = document.getElementById('status-indicator');
         const statusText = document.getElementById('status-text');
 
-        setStatus("active");
+        setStatus("NA");
         function setStatus(newStatus) {
             if (newStatus === "busy") {
                 statusIndicator.style.backgroundColor = "red";
@@ -75,6 +75,11 @@
             } else if (newStatus === "active") {
                 statusIndicator.style.backgroundColor = "green";
                 statusText.innerText = "In Room";
+            }
+            else if(newStatus === "NA")
+            {
+                statusIndicator.style.backgroundColor = "yellow";
+                statusText.innerText = "In Room But busy";
             }
         }
     </script>
