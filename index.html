@@ -69,7 +69,7 @@
 
         setStatus("busy");
         function setStatus(newStatus) {
-            if (newStatus === "busy") {
+            if (newStatus === "active") {
                 statusIndicator.style.backgroundColor = "red";
                 statusText.innerText = "Out Of Room";
             } else if (newStatus === "active") {
