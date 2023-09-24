@@ -63,7 +63,7 @@
         <div id="status-indicator"></div>
         <span id="status-text">Out Of Room</span>
         <br> <br>
-        <span id="last-updated">Last Updated at: September 24, 2023, 6:10 PM</span>
+        <span id="last-updated">Last Updated at: September 24, 2023, 6:50 PM</span>
     </div>
 
    <footer>
@@ -73,7 +73,7 @@
         const statusIndicator = document.getElementById('status-indicator');
         const statusText = document.getElementById('status-text');
 
-        setStatus("active");
+        setStatus("busy");
         function setStatus(newStatus) {
             if (newStatus === "busy") {
                 statusIndicator.style.backgroundColor = "red";
